@@ -1,0 +1,376 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0CFEE36CA28C93ABE798AE7A /* Pods_Pippop_Videos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07B11085D9C0E8F9D6117663 /* Pods_Pippop_Videos.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		D50066B51C467036001F5FB2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50066B41C467036001F5FB2 /* AppDelegate.swift */; };
+		D50066B71C467036001F5FB2 /* SubjectsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50066B61C467036001F5FB2 /* SubjectsController.swift */; };
+		D50066BA1C467036001F5FB2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D50066B81C467036001F5FB2 /* Main.storyboard */; };
+		D50066BC1C467036001F5FB2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D50066BB1C467036001F5FB2 /* Assets.xcassets */; };
+		D50066BF1C467036001F5FB2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D50066BD1C467036001F5FB2 /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		07B11085D9C0E8F9D6117663 /* Pods_Pippop_Videos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pippop_Videos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2EF93A62DA0F0684A5CC079D /* Pods-Pippop Videos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pippop Videos.release.xcconfig"; path = "Pods/Target Support Files/Pods-Pippop Videos/Pods-Pippop Videos.release.xcconfig"; sourceTree = "<group>"; };
+		A63E111FA86335AF5D902C16 /* Pods-Pippop Videos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pippop Videos.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Pippop Videos/Pods-Pippop Videos.debug.xcconfig"; sourceTree = "<group>"; };
+		D50066B11C467036001F5FB2 /* Pippop Videos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pippop Videos.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D50066B41C467036001F5FB2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D50066B61C467036001F5FB2 /* SubjectsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectsController.swift; sourceTree = "<group>"; };
+		D50066B91C467036001F5FB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D50066BB1C467036001F5FB2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D50066BE1C467036001F5FB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D50066C01C467036001F5FB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D50066AE1C467036001F5FB2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0CFEE36CA28C93ABE798AE7A /* Pods_Pippop_Videos.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2FB265116B2853FF742C3324 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				07B11085D9C0E8F9D6117663 /* Pods_Pippop_Videos.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D50066A81C467036001F5FB2 = {
+			isa = PBXGroup;
+			children = (
+				D50066B31C467036001F5FB2 /* Pippop Videos */,
+				D50066B21C467036001F5FB2 /* Products */,
+				FD314C4B0F4379EA0D48D7B6 /* Pods */,
+				2FB265116B2853FF742C3324 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D50066B21C467036001F5FB2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D50066B11C467036001F5FB2 /* Pippop Videos.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D50066B31C467036001F5FB2 /* Pippop Videos */ = {
+			isa = PBXGroup;
+			children = (
+				D50066B41C467036001F5FB2 /* AppDelegate.swift */,
+				D50066B61C467036001F5FB2 /* SubjectsController.swift */,
+				D50066B81C467036001F5FB2 /* Main.storyboard */,
+				D50066BB1C467036001F5FB2 /* Assets.xcassets */,
+				D50066BD1C467036001F5FB2 /* LaunchScreen.storyboard */,
+				D50066C01C467036001F5FB2 /* Info.plist */,
+			);
+			path = "Pippop Videos";
+			sourceTree = "<group>";
+		};
+		FD314C4B0F4379EA0D48D7B6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A63E111FA86335AF5D902C16 /* Pods-Pippop Videos.debug.xcconfig */,
+				2EF93A62DA0F0684A5CC079D /* Pods-Pippop Videos.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D50066B01C467036001F5FB2 /* Pippop Videos */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D50066C31C467036001F5FB2 /* Build configuration list for PBXNativeTarget "Pippop Videos" */;
+			buildPhases = (
+				B28BAC6A2CA283A2FF35432F /* Check Pods Manifest.lock */,
+				D50066AD1C467036001F5FB2 /* Sources */,
+				D50066AE1C467036001F5FB2 /* Frameworks */,
+				D50066AF1C467036001F5FB2 /* Resources */,
+				1E542987BB5A558EF9C95A91 /* Embed Pods Frameworks */,
+				97054DFA1088F72B84BAB689 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pippop Videos";
+			productName = "Pippop Videos";
+			productReference = D50066B11C467036001F5FB2 /* Pippop Videos.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D50066A91C467036001F5FB2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Alex Thompson";
+				TargetAttributes = {
+					D50066B01C467036001F5FB2 = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = G938E82P9V;
+					};
+				};
+			};
+			buildConfigurationList = D50066AC1C467036001F5FB2 /* Build configuration list for PBXProject "Pippop Videos" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D50066A81C467036001F5FB2;
+			productRefGroup = D50066B21C467036001F5FB2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D50066B01C467036001F5FB2 /* Pippop Videos */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D50066AF1C467036001F5FB2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D50066BF1C467036001F5FB2 /* LaunchScreen.storyboard in Resources */,
+				D50066BC1C467036001F5FB2 /* Assets.xcassets in Resources */,
+				D50066BA1C467036001F5FB2 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1E542987BB5A558EF9C95A91 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Pippop Videos/Pods-Pippop Videos-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		97054DFA1088F72B84BAB689 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Pippop Videos/Pods-Pippop Videos-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B28BAC6A2CA283A2FF35432F /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D50066AD1C467036001F5FB2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D50066B71C467036001F5FB2 /* SubjectsController.swift in Sources */,
+				D50066B51C467036001F5FB2 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D50066B81C467036001F5FB2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D50066B91C467036001F5FB2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D50066BD1C467036001F5FB2 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D50066BE1C467036001F5FB2 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D50066C11C467036001F5FB2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D50066C21C467036001F5FB2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D50066C41C467036001F5FB2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A63E111FA86335AF5D902C16 /* Pods-Pippop Videos.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "Pippop Videos/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.learnwithpip.Pippop-Videos";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D50066C51C467036001F5FB2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2EF93A62DA0F0684A5CC079D /* Pods-Pippop Videos.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "Pippop Videos/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.learnwithpip.Pippop-Videos";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D50066AC1C467036001F5FB2 /* Build configuration list for PBXProject "Pippop Videos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D50066C11C467036001F5FB2 /* Debug */,
+				D50066C21C467036001F5FB2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D50066C31C467036001F5FB2 /* Build configuration list for PBXNativeTarget "Pippop Videos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D50066C41C467036001F5FB2 /* Debug */,
+				D50066C51C467036001F5FB2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D50066A91C467036001F5FB2 /* Project object */;
+}

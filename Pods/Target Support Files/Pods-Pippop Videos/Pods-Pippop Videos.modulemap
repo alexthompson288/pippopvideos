@@ -1,0 +1,6 @@
+framework module Pods_Pippop_Videos {
+  umbrella header "Pods-Pippop Videos-umbrella.h"
+
+  export *
+  module * { export * }
+}
