@@ -1,18 +1,24 @@
 PODS:
   - Alamofire (3.1.4)
+  - Bolts/Tasks (1.6.0)
   - Mixpanel (2.9.1):
     - Mixpanel/Mixpanel (= 2.9.1)
   - Mixpanel/Mixpanel (2.9.1)
+  - Parse (1.12.0):
+    - Bolts/Tasks (~> 1.5)
   - ReachabilitySwift (2.3.3)
 
 DEPENDENCIES:
   - Alamofire
   - Mixpanel
+  - Parse
   - ReachabilitySwift
 
 SPEC CHECKSUMS:
   Alamofire: fbc829692f351fa1d8a31dd75fd7f7f56fea31fb
+  Bolts: f52a250053bb517ca874523c3913776359ab3def
   Mixpanel: 5ca24b2a05f4c77fe9bcfe7671d681d0f3f8d76f
+  Parse: de2c52a9a1421b91ae7594ab8ce191afd184f19b
   ReachabilitySwift: e0f6b6f280effb47731acfaaa2d5ffe223703793
 
 COCOAPODS: 0.38.2

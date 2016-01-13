@@ -5,6 +5,7 @@ target 'Pippop Videos' do
 pod 'Mixpanel'
     pod 'Alamofire'
     pod 'ReachabilitySwift'
+    pod 'Parse'
 
 end
 

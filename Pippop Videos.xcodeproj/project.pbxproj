@@ -13,6 +13,17 @@
 		D50066BA1C467036001F5FB2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D50066B81C467036001F5FB2 /* Main.storyboard */; };
 		D50066BC1C467036001F5FB2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D50066BB1C467036001F5FB2 /* Assets.xcassets */; };
 		D50066BF1C467036001F5FB2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D50066BD1C467036001F5FB2 /* LaunchScreen.storyboard */; };
+		D50066CB1C467233001F5FB2 /* VideosIndexController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50066CA1C467233001F5FB2 /* VideosIndexController.swift */; };
+		D50066CD1C467247001F5FB2 /* VideoShowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50066CC1C467247001F5FB2 /* VideoShowController.swift */; };
+		D50066CF1C4672C6001F5FB2 /* videos.json in Resources */ = {isa = PBXBuildFile; fileRef = D50066CE1C4672C6001F5FB2 /* videos.json */; };
+		D50066D11C467315001F5FB2 /* Subject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50066D01C467315001F5FB2 /* Subject.swift */; };
+		D50066D31C4674C2001F5FB2 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50066D21C4674C2001F5FB2 /* Video.swift */; };
+		D50066D51C4674FA001F5FB2 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50066D41C4674FA001F5FB2 /* Utility.swift */; };
+		D50066D71C467553001F5FB2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50066D61C467553001F5FB2 /* Constants.swift */; };
+		D50066D91C467BE6001F5FB2 /* SubjectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50066D81C467BE6001F5FB2 /* SubjectCell.swift */; };
+		D50066DB1C467F2E001F5FB2 /* VideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50066DA1C467F2E001F5FB2 /* VideoCell.swift */; };
+		D50066DD1C4693FD001F5FB2 /* CustomButtonViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50066DC1C4693FD001F5FB2 /* CustomButtonViews.swift */; };
+		D50066DF1C46985E001F5FB2 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50066DE1C46985E001F5FB2 /* SettingsController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +37,17 @@
 		D50066BB1C467036001F5FB2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D50066BE1C467036001F5FB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D50066C01C467036001F5FB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D50066CA1C467233001F5FB2 /* VideosIndexController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideosIndexController.swift; sourceTree = "<group>"; };
+		D50066CC1C467247001F5FB2 /* VideoShowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoShowController.swift; sourceTree = "<group>"; };
+		D50066CE1C4672C6001F5FB2 /* videos.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = videos.json; sourceTree = "<group>"; };
+		D50066D01C467315001F5FB2 /* Subject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Subject.swift; sourceTree = "<group>"; };
+		D50066D21C4674C2001F5FB2 /* Video.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
+		D50066D41C4674FA001F5FB2 /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
+		D50066D61C467553001F5FB2 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		D50066D81C467BE6001F5FB2 /* SubjectCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubjectCell.swift; sourceTree = "<group>"; };
+		D50066DA1C467F2E001F5FB2 /* VideoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCell.swift; sourceTree = "<group>"; };
+		D50066DC1C4693FD001F5FB2 /* CustomButtonViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButtonViews.swift; sourceTree = "<group>"; };
+		D50066DE1C46985E001F5FB2 /* SettingsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,14 +91,57 @@
 		D50066B31C467036001F5FB2 /* Pippop Videos */ = {
 			isa = PBXGroup;
 			children = (
-				D50066B41C467036001F5FB2 /* AppDelegate.swift */,
+				D50066C61C4671A1001F5FB2 /* Controllers */,
+				D50066C91C4671B1001F5FB2 /* Resources */,
+				D50066C81C4671AB001F5FB2 /* Views */,
+				D50066C71C4671A7001F5FB2 /* Models */,
+			);
+			path = "Pippop Videos";
+			sourceTree = "<group>";
+		};
+		D50066C61C4671A1001F5FB2 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D50066DE1C46985E001F5FB2 /* SettingsController.swift */,
 				D50066B61C467036001F5FB2 /* SubjectsController.swift */,
+				D50066CA1C467233001F5FB2 /* VideosIndexController.swift */,
+				D50066CC1C467247001F5FB2 /* VideoShowController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		D50066C71C4671A7001F5FB2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D50066D01C467315001F5FB2 /* Subject.swift */,
+				D50066D21C4674C2001F5FB2 /* Video.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		D50066C81C4671AB001F5FB2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D50066DC1C4693FD001F5FB2 /* CustomButtonViews.swift */,
+				D50066D81C467BE6001F5FB2 /* SubjectCell.swift */,
+				D50066DA1C467F2E001F5FB2 /* VideoCell.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		D50066C91C4671B1001F5FB2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D50066D41C4674FA001F5FB2 /* Utility.swift */,
+				D50066D61C467553001F5FB2 /* Constants.swift */,
+				D50066CE1C4672C6001F5FB2 /* videos.json */,
+				D50066B41C467036001F5FB2 /* AppDelegate.swift */,
 				D50066B81C467036001F5FB2 /* Main.storyboard */,
 				D50066BB1C467036001F5FB2 /* Assets.xcassets */,
 				D50066BD1C467036001F5FB2 /* LaunchScreen.storyboard */,
 				D50066C01C467036001F5FB2 /* Info.plist */,
 			);
-			path = "Pippop Videos";
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		FD314C4B0F4379EA0D48D7B6 /* Pods */ = {
@@ -151,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D50066BF1C467036001F5FB2 /* LaunchScreen.storyboard in Resources */,
+				D50066CF1C4672C6001F5FB2 /* videos.json in Resources */,
 				D50066BC1C467036001F5FB2 /* Assets.xcassets in Resources */,
 				D50066BA1C467036001F5FB2 /* Main.storyboard in Resources */,
 			);
@@ -211,8 +277,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D50066DF1C46985E001F5FB2 /* SettingsController.swift in Sources */,
+				D50066D51C4674FA001F5FB2 /* Utility.swift in Sources */,
+				D50066CD1C467247001F5FB2 /* VideoShowController.swift in Sources */,
+				D50066D31C4674C2001F5FB2 /* Video.swift in Sources */,
+				D50066D91C467BE6001F5FB2 /* SubjectCell.swift in Sources */,
+				D50066D11C467315001F5FB2 /* Subject.swift in Sources */,
+				D50066DB1C467F2E001F5FB2 /* VideoCell.swift in Sources */,
 				D50066B71C467036001F5FB2 /* SubjectsController.swift in Sources */,
 				D50066B51C467036001F5FB2 /* AppDelegate.swift in Sources */,
+				D50066CB1C467233001F5FB2 /* VideosIndexController.swift in Sources */,
+				D50066DD1C4693FD001F5FB2 /* CustomButtonViews.swift in Sources */,
+				D50066D71C467553001F5FB2 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

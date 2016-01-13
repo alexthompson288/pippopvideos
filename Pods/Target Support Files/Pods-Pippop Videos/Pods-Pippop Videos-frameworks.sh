@@ -53,11 +53,15 @@ code_sign_if_enabled() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework 'Pods-Pippop Videos/Alamofire.framework'
+  install_framework 'Pods-Pippop Videos/Bolts.framework'
   install_framework 'Pods-Pippop Videos/Mixpanel.framework'
+  install_framework 'Pods-Pippop Videos/Parse.framework'
   install_framework 'Pods-Pippop Videos/ReachabilitySwift.framework'
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework 'Pods-Pippop Videos/Alamofire.framework'
+  install_framework 'Pods-Pippop Videos/Bolts.framework'
   install_framework 'Pods-Pippop Videos/Mixpanel.framework'
+  install_framework 'Pods-Pippop Videos/Parse.framework'
   install_framework 'Pods-Pippop Videos/ReachabilitySwift.framework'
 fi

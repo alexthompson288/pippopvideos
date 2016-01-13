@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3FFF9F421FC86FC50B14C96B"
+               BlueprintIdentifier = "95FF1E1AF5EBE441757A3D70"
                BuildableName = "Pods_Pippop_Videos.framework"
                BlueprintName = "Pods-Pippop Videos"
                ReferencedContainer = "container:Pods.xcodeproj">

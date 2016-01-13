@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="V3p-zI-3cw">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
-        <!--Subjects Controller-->
+        <!--Videos-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="SubjectsController" customModule="Pippop_Videos" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Videos" id="BYZ-38-t0r" customClass="VideosIndexController" customModule="Pippop_Videos" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,18 +19,85 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Ihb-sl-B9w">
+                                <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="7wI-n2-jg0">
+                                    <size key="itemSize" width="202" height="186"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="VideoCellId" id="vKf-3W-TUh" customClass="VideoCell" customModule="Pippop_Videos" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="64" width="202" height="186"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="202" height="186"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DE4-A4-wrI">
+                                                    <rect key="frame" x="0.0" y="8" width="202" height="37"/>
+                                                    <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="15"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle_blue" translatesAutoresizingMaskIntoConstraints="NO" id="HOc-Y9-vzL" userLabel="Image Ring Bg">
+                                                    <rect key="frame" x="0.0" y="37" width="202" height="149"/>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TiO-cT-AnN">
+                                                    <rect key="frame" x="20" y="56" width="162" height="117"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="TiO-cT-AnN" firstAttribute="width" secondItem="HOc-Y9-vzL" secondAttribute="width" multiplier="0.8" id="2th-fm-szI"/>
+                                            <constraint firstItem="DE4-A4-wrI" firstAttribute="width" secondItem="vKf-3W-TUh" secondAttribute="width" id="6fT-qK-Wra"/>
+                                            <constraint firstItem="HOc-Y9-vzL" firstAttribute="centerX" secondItem="vKf-3W-TUh" secondAttribute="centerX" id="B5k-S2-OiX"/>
+                                            <constraint firstItem="DE4-A4-wrI" firstAttribute="centerX" secondItem="vKf-3W-TUh" secondAttribute="centerX" id="DQ3-sD-JbJ"/>
+                                            <constraint firstItem="TiO-cT-AnN" firstAttribute="centerX" secondItem="HOc-Y9-vzL" secondAttribute="centerX" id="EXS-rL-Qbd"/>
+                                            <constraint firstItem="DE4-A4-wrI" firstAttribute="height" secondItem="vKf-3W-TUh" secondAttribute="height" multiplier="0.2" id="MuE-QV-20j"/>
+                                            <constraint firstItem="HOc-Y9-vzL" firstAttribute="height" secondItem="vKf-3W-TUh" secondAttribute="height" multiplier="0.8" id="Nj5-FH-DZz"/>
+                                            <constraint firstItem="HOc-Y9-vzL" firstAttribute="top" secondItem="DE4-A4-wrI" secondAttribute="bottom" constant="-8" id="Oct-xb-dBz"/>
+                                            <constraint firstItem="TiO-cT-AnN" firstAttribute="height" secondItem="HOc-Y9-vzL" secondAttribute="height" multiplier="0.8" id="TNY-h5-Dsb"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="HOc-Y9-vzL" secondAttribute="bottom" constant="-8" id="eOO-Pw-b43"/>
+                                            <constraint firstItem="TiO-cT-AnN" firstAttribute="centerY" secondItem="HOc-Y9-vzL" secondAttribute="centerY" id="erA-nc-Id8"/>
+                                            <constraint firstItem="HOc-Y9-vzL" firstAttribute="width" secondItem="vKf-3W-TUh" secondAttribute="width" id="y6B-Vl-CIv"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="imageVideo" destination="TiO-cT-AnN" id="ndl-kd-5to"/>
+                                            <outlet property="labelVideoTitle" destination="DE4-A4-wrI" id="PzS-wz-vVM"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.99607843139999996" green="0.82745098039999998" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Ihb-sl-B9w" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="E8h-Hg-jVR"/>
+                            <constraint firstItem="Ihb-sl-B9w" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Slm-gu-bUA"/>
+                            <constraint firstItem="Ihb-sl-B9w" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ZBl-1e-h2c"/>
+                            <constraint firstItem="Ihb-sl-B9w" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="mFO-31-zh5"/>
+                        </constraints>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="myCollectionViewVideos" destination="Ihb-sl-B9w" id="Msl-Qr-gwO"/>
+                        <outlet property="myCollectionViewVideosFlowLayout" destination="7wI-n2-jg0" id="zrJ-Gn-6kL"/>
+                        <segue destination="DtX-38-SsM" kind="show" identifier="VideosToVideoSegue" id="rjc-le-IwT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="545" y="554"/>
         </scene>
-        <!--Subjects Controller-->
+        <!--Video-->
         <scene sceneID="UxL-dA-X5V">
             <objects>
-                <viewController id="DtX-38-SsM" customClass="SubjectsController" customModule="Pippop_Videos" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Video" id="DtX-38-SsM" customClass="VideoShowController" customModule="Pippop_Videos" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ucJ-lF-16A"/>
                         <viewControllerLayoutGuide type="bottom" id="Tyv-99-JTP"/>
@@ -35,18 +105,116 @@
                     <view key="view" contentMode="scaleToFill" id="qM9-Yd-5TC">
                         <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kqb-JP-d9I">
+                                <rect key="frame" x="37" y="87" width="662" height="207"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xKv-Qw-32R" customClass="myCustomMenuButton" customModule="Pippop_Videos" customModuleProvider="target">
+                                <rect key="frame" x="405" y="348" width="294" height="59"/>
+                                <state key="normal" title="Play"/>
+                                <connections>
+                                    <action selector="ActionPlay:" destination="DtX-38-SsM" eventType="touchUpInside" id="1hb-WI-qwV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OiH-FC-gTY" customClass="myCustomMenuButton" customModule="Pippop_Videos" customModuleProvider="target">
+                                <rect key="frame" x="37" y="348" width="294" height="59"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="OiH-FC-gTY" secondAttribute="height" multiplier="5:1" id="yFR-Rs-L9T"/>
+                                </constraints>
+                                <state key="normal" title="Download"/>
+                                <connections>
+                                    <action selector="ActionDownload:" destination="DtX-38-SsM" eventType="touchUpInside" id="dhn-D4-7zI"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FOs-0f-RbT" userLabel="Description">
+                                <rect key="frame" x="37" y="297" width="662" height="62"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="15"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4OR-Zl-OkL">
+                                <rect key="frame" x="37" y="64" width="662" height="21"/>
+                                <color key="progressTintColor" red="0.31764705879999999" green="0.73725490199999999" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="trackTintColor" red="0.90588241820000004" green="0.46666669849999998" blue="0.3058823645" alpha="1" colorSpace="deviceRGB"/>
+                            </progressView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.99607843139999996" green="0.82745098039999998" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="xKv-Qw-32R" firstAttribute="top" secondItem="OiH-FC-gTY" secondAttribute="top" id="6iV-eF-Fo1"/>
+                            <constraint firstItem="FOs-0f-RbT" firstAttribute="trailing" secondItem="kqb-JP-d9I" secondAttribute="trailing" id="7mu-0v-08a"/>
+                            <constraint firstItem="kqb-JP-d9I" firstAttribute="centerX" secondItem="qM9-Yd-5TC" secondAttribute="centerX" id="8Na-Sq-UC7"/>
+                            <constraint firstItem="4OR-Zl-OkL" firstAttribute="height" secondItem="qM9-Yd-5TC" secondAttribute="height" multiplier="0.05" id="EVi-h9-IL9"/>
+                            <constraint firstItem="FOs-0f-RbT" firstAttribute="top" secondItem="kqb-JP-d9I" secondAttribute="bottom" constant="3" id="GwM-ol-ob3"/>
+                            <constraint firstItem="4OR-Zl-OkL" firstAttribute="top" secondItem="ucJ-lF-16A" secondAttribute="bottom" id="Xwk-Tn-hVt"/>
+                            <constraint firstItem="kqb-JP-d9I" firstAttribute="width" secondItem="qM9-Yd-5TC" secondAttribute="width" multiplier="0.9" id="bgz-EH-ilJ"/>
+                            <constraint firstItem="xKv-Qw-32R" firstAttribute="trailing" secondItem="kqb-JP-d9I" secondAttribute="trailing" id="cIb-hh-nwd"/>
+                            <constraint firstItem="4OR-Zl-OkL" firstAttribute="leading" secondItem="kqb-JP-d9I" secondAttribute="leading" id="cdW-pz-dRf"/>
+                            <constraint firstItem="4OR-Zl-OkL" firstAttribute="trailing" secondItem="kqb-JP-d9I" secondAttribute="trailing" id="cjy-4n-bj7"/>
+                            <constraint firstItem="kqb-JP-d9I" firstAttribute="top" secondItem="4OR-Zl-OkL" secondAttribute="bottom" constant="2" id="coI-fI-yyW"/>
+                            <constraint firstItem="OiH-FC-gTY" firstAttribute="width" secondItem="qM9-Yd-5TC" secondAttribute="width" multiplier="0.4" id="evS-7C-TSd"/>
+                            <constraint firstItem="xKv-Qw-32R" firstAttribute="bottom" secondItem="OiH-FC-gTY" secondAttribute="bottom" id="fDi-Q0-Sgk"/>
+                            <constraint firstItem="Tyv-99-JTP" firstAttribute="top" secondItem="OiH-FC-gTY" secondAttribute="bottom" constant="7" id="fwU-xb-xPq"/>
+                            <constraint firstItem="FOs-0f-RbT" firstAttribute="leading" secondItem="kqb-JP-d9I" secondAttribute="leading" id="h8a-QO-3Yz"/>
+                            <constraint firstItem="OiH-FC-gTY" firstAttribute="leading" secondItem="kqb-JP-d9I" secondAttribute="leading" id="hPt-Pj-Ktp"/>
+                            <constraint firstItem="kqb-JP-d9I" firstAttribute="height" secondItem="qM9-Yd-5TC" secondAttribute="height" multiplier="0.5" id="kTG-wC-SMr"/>
+                            <constraint firstItem="xKv-Qw-32R" firstAttribute="width" secondItem="OiH-FC-gTY" secondAttribute="width" id="oNl-QT-f2f"/>
+                            <constraint firstItem="FOs-0f-RbT" firstAttribute="height" secondItem="qM9-Yd-5TC" secondAttribute="height" multiplier="0.15" id="r6B-3K-Nh5"/>
+                            <constraint firstItem="xKv-Qw-32R" firstAttribute="height" secondItem="OiH-FC-gTY" secondAttribute="height" id="upl-e2-Jvt"/>
+                        </constraints>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="buttonDownload" destination="OiH-FC-gTY" id="iAS-5V-FP4"/>
+                        <outlet property="buttonPlay" destination="xKv-Qw-32R" id="cLl-9b-uzA"/>
+                        <outlet property="imageVideoImage" destination="kqb-JP-d9I" id="JDA-s3-0Ab"/>
+                        <outlet property="labelVideoDescription" destination="FOs-0f-RbT" id="PZd-ZF-89D"/>
+                        <outlet property="progressBarVideo" destination="4OR-Zl-OkL" id="7WK-QI-aMI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kfa-RB-EAx" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="545" y="1122"/>
         </scene>
-        <!--Subjects Controller-->
+        <!--Settings Controller-->
+        <scene sceneID="jrK-Rx-0bL">
+            <objects>
+                <viewController id="Q9b-HL-1Cl" customClass="SettingsController" customModule="Pippop_Videos" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Gvz-ey-0cq"/>
+                        <viewControllerLayoutGuide type="bottom" id="jHf-Ax-8yS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yp5-c5-TIB">
+                        <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vp0-rd-2zZ" customClass="myCustomMenuButton" customModule="Pippop_Videos" customModuleProvider="target">
+                                <rect key="frame" x="185" y="154" width="368" height="107"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Vp0-rd-2zZ" secondAttribute="height" multiplier="24:7" id="pYF-pY-NPY"/>
+                                </constraints>
+                                <state key="normal" title="Delete all saved videos"/>
+                                <connections>
+                                    <action selector="ActionReset:" destination="Q9b-HL-1Cl" eventType="touchUpInside" id="9ve-ZS-31c"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.99607843139999996" green="0.82745098039999998" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Vp0-rd-2zZ" firstAttribute="centerX" secondItem="yp5-c5-TIB" secondAttribute="centerX" id="kYz-3f-agX"/>
+                            <constraint firstItem="Vp0-rd-2zZ" firstAttribute="centerY" secondItem="yp5-c5-TIB" secondAttribute="centerY" id="vGI-9o-qt8"/>
+                            <constraint firstItem="Vp0-rd-2zZ" firstAttribute="width" secondItem="yp5-c5-TIB" secondAttribute="width" multiplier="0.5" id="yXw-rX-jrD"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gt1-l7-VU8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1364" y="-21"/>
+        </scene>
+        <!--Subjects-->
         <scene sceneID="Oyi-X6-3xf">
             <objects>
-                <viewController id="7l6-WW-gqq" customClass="SubjectsController" customModule="Pippop_Videos" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Subjects" id="7l6-WW-gqq" customClass="SubjectsController" customModule="Pippop_Videos" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="OYP-YA-0mJ"/>
                         <viewControllerLayoutGuide type="bottom" id="2iW-QB-Wiy"/>
@@ -54,13 +222,103 @@
                     <view key="view" contentMode="scaleToFill" id="WBb-eQ-8il">
                         <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Q9a-D7-6f7">
+                                <rect key="frame" x="0.0" y="142" width="736" height="272"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="4GO-Xe-nvI">
+                                    <size key="itemSize" width="188" height="197"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SubjectCellId" id="tAO-Qh-94C" customClass="SubjectCell" customModule="Pippop_Videos" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="64" width="188" height="197"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="188" height="197"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oZA-MY-cxP">
+                                                    <rect key="frame" x="0.0" y="-1" width="188" height="41"/>
+                                                    <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="22"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kAD-me-2th">
+                                                    <rect key="frame" x="0.0" y="40" width="188" height="157"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="oZA-MY-cxP" firstAttribute="width" secondItem="tAO-Qh-94C" secondAttribute="width" id="9An-zC-iDg"/>
+                                            <constraint firstItem="oZA-MY-cxP" firstAttribute="centerX" secondItem="tAO-Qh-94C" secondAttribute="centerX" id="9UZ-fq-coq"/>
+                                            <constraint firstItem="kAD-me-2th" firstAttribute="height" secondItem="tAO-Qh-94C" secondAttribute="height" multiplier="0.8" id="Blj-AC-wS3"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="kAD-me-2th" secondAttribute="bottom" constant="-8" id="KBs-Vr-W96"/>
+                                            <constraint firstItem="kAD-me-2th" firstAttribute="width" secondItem="tAO-Qh-94C" secondAttribute="width" id="Np5-9t-5vW"/>
+                                            <constraint firstItem="oZA-MY-cxP" firstAttribute="height" secondItem="tAO-Qh-94C" secondAttribute="height" multiplier="0.2" id="VXY-UC-kTG"/>
+                                            <constraint firstItem="kAD-me-2th" firstAttribute="centerX" secondItem="tAO-Qh-94C" secondAttribute="centerX" id="hcR-CA-es9"/>
+                                            <constraint firstItem="kAD-me-2th" firstAttribute="top" secondItem="oZA-MY-cxP" secondAttribute="bottom" id="xce-mQ-gNN"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="imageSubject" destination="kAD-me-2th" id="XYE-nf-sZE"/>
+                                            <outlet property="labelSubject" destination="oZA-MY-cxP" id="yIX-n3-RcT"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.99607843139999996" green="0.82745098039999998" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Q9a-D7-6f7" firstAttribute="width" secondItem="WBb-eQ-8il" secondAttribute="width" id="Ut2-Vn-0Q1"/>
+                            <constraint firstItem="Q9a-D7-6f7" firstAttribute="centerX" secondItem="WBb-eQ-8il" secondAttribute="centerX" id="azw-ib-R9e"/>
+                            <constraint firstItem="Q9a-D7-6f7" firstAttribute="height" secondItem="WBb-eQ-8il" secondAttribute="height" id="qrs-gn-uR8"/>
+                            <constraint firstItem="Q9a-D7-6f7" firstAttribute="centerY" secondItem="WBb-eQ-8il" secondAttribute="centerY" id="suW-Wz-mtS"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Pippop Videos" id="r7o-xE-fn3">
+                        <barButtonItem key="rightBarButtonItem" title="Settings" id="wkg-SQ-5OP">
+                            <connections>
+                                <segue destination="Q9b-HL-1Cl" kind="show" id="FXg-9D-OpL"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="myCollectionViewSubjects" destination="Q9a-D7-6f7" id="CXI-eT-kvG"/>
+                        <outlet property="myCollectionViewSubjectsFlowLayout" destination="4GO-Xe-nvI" id="Avg-9P-mqV"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="SubjectsToVideosSegue" id="nwB-nt-emR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wDJ-fX-f7e" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="545" y="-21"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="kYd-jU-H1k">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="V3p-zI-3cw" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gkX-93-U0h">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="7l6-WW-gqq" kind="relationship" relationship="rootViewController" id="355-Sa-BsT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8RY-ZJ-l49" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="505" y="-588"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="circle_blue" width="754" height="754"/>
+    </resources>
 </document>
