@@ -59,22 +59,20 @@ class VideoShowController: UIViewController {
             "scene" : "Video"
         ]
         PFAnalytics.trackEvent("download_video", dimensions: dimensions)
-        
-        if videoIsLocal {
-            deleteVideo()
-        } else {
-            downloadVideo()
+        if !isDownloading {
+            if videoIsLocal {
+                deleteVideo()
+            } else {
+                downloadVideo()
+            }
         }
     }
-    
     
     @IBAction func ActionPlay(sender: AnyObject) {
         playVideo()
     }
     
-    
     func setDownloadButtonValue(){
-        
         if videoIsLocal {
             buttonDownload.setTitle("Delete", forState: .Normal)
         } else {
@@ -84,11 +82,12 @@ class VideoShowController: UIViewController {
     
     func deleteVideo(){
         print("About to delete video")
-        let filePath = Utility.createFilePathInDocsDir(currentVideo.videoUrlLocal)
+        let filePath = Utility.createFilePathInDocsDir(currentVideo.returnVideoLocalUrl())
+        print("Filepath is \(filePath)")
         let fileManager = NSFileManager.defaultManager()
         do{
             try fileManager.removeItemAtPath(filePath)
-            
+            print("Video deleted")
         } catch {
             print("Unable to delete video")
         }
@@ -118,7 +117,6 @@ class VideoShowController: UIViewController {
         self.moviePlayer = MPMoviePlayerViewController(contentURL: video_URL)
         self.moviePlayer.view.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height)
         presentMoviePlayerViewControllerAnimated(self.moviePlayer)
-
     }
     
     func downloadVideo(){
@@ -145,12 +143,13 @@ class VideoShowController: UIViewController {
                             print("Failed with error: \(error)")
                         } else {
                             print("Downloaded file successfully")
-                            
+                            self.isDownloading = false
                             self.progressBarVideo.hidden = true
                             self.videoIsLocal = true
                             self.setDownloadButtonValue()
                             self.progressBarVideo.setProgress(0.0, animated: false)
-                            
+                            var doNotBackupAdded = self.isVideoLocalCheck()
+                            print("Do not backup flag added: \(doNotBackupAdded)")
                         }
                 }
             } else {
@@ -189,6 +188,7 @@ class VideoShowController: UIViewController {
     func addSkipBackupAttributeToItemAtURL(URL:NSURL) ->Bool{
         do {
             let success = try URL.setResourceValue(true, forKey: NSURLIsExcludedFromBackupKey)
+            print("Do not backup flag at : \(URL). Success: \(success)")
             return true
         }
         catch {

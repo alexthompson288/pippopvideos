@@ -18,7 +18,6 @@ class myCustomMenuButton: UIButton {
         
         switch UIDevice.currentDevice().userInterfaceIdiom {
         case .Phone:
-            
             titleLabel?.font = iPhoneFontTiny
         case .Pad:
             titleLabel?.font = iPadFontSmall

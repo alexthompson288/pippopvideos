@@ -25,6 +25,10 @@ class VideosIndexController: UIViewController, UICollectionViewDataSource, UICol
         self.title = current_subject.title
     }
     
+    override func viewDidAppear(animated: Bool) {
+        myCollectionViewVideos.reloadData()
+    }
+    
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
         return 1
     }
@@ -39,6 +43,11 @@ class VideosIndexController: UIViewController, UICollectionViewDataSource, UICol
         cell.imageVideo.image = nil
         cell.imageVideo.image = thisVideo.returnBadgeImage()
         cell.labelVideoTitle.text = thisVideo.title
+        let isVideoLocal = isVideoLocalCheck(thisVideo)
+        cell.imageDownloadedIcon.image = nil
+        if isVideoLocal {
+            cell.imageDownloadedIcon.image = UIImage(named: "icon_tick")
+        }
         switch UIDevice.currentDevice().userInterfaceIdiom {
         case .Phone :
             cell.labelVideoTitle.font = iPhoneFontTiny
@@ -57,6 +66,11 @@ class VideosIndexController: UIViewController, UICollectionViewDataSource, UICol
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "VideosToVideoSegue" {
             let indexPath = myCollectionViewVideos.indexPathForCell(sender as! VideoCell)
+            let video = current_subject.videos[indexPath!.row]
+            let dimensions = [
+                "video" : "\(video.title)"
+            ]
+            PFAnalytics.trackEvent("video_chosen", dimensions: dimensions)
             let vc = segue.destinationViewController as! VideoShowController
             vc.currentVideo = current_subject.videos[indexPath!.row]
         }
@@ -69,6 +83,24 @@ class VideosIndexController: UIViewController, UICollectionViewDataSource, UICol
         print("Cell width: \(cellWidth). width: \(width). Total width: \(CGRectGetWidth(myCollectionViewVideos!.frame))")
         myCollectionViewVideosFlowLayout.itemSize = CGSize(width: cellWidth, height: cellWidth)
     }
+    
+    func isVideoLocalCheck(video: Video) -> Bool {
+        let filePath = Utility.createFilePathInDocsDir(video.returnVideoLocalUrl())
+        print("Path: \(filePath)")
+        let fileExists = Utility.checkIfFileExistsAtPath(filePath)
+        if fileExists {
+            var totalurl = NSURL()
+            if let directoryURL = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)[0] as? NSURL {
+                //                println("Video filename... \(video_filename)")
+                totalurl = directoryURL.URLByAppendingPathComponent(video.returnVideoLocalUrl())
+            }
+            return true
+        } else {
+            return false
+        }
+        
+    }
+
     
     
     

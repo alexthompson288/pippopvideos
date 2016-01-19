@@ -65,7 +65,12 @@ class SubjectsController: UIViewController, UICollectionViewDelegate, UICollecti
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "SubjectsToVideosSegue" {
             let indexPath = myCollectionViewSubjects.indexPathForCell(sender as! SubjectCell)
+            var subject = video_data[indexPath!.row]
             let vc = segue.destinationViewController as! VideosIndexController
+            let dimensions = [
+                "subject" : "\(subject.title)"
+            ]
+            PFAnalytics.trackEvent("subject_chosen", dimensions: dimensions)
             vc.current_subject = video_data[indexPath!.row]
         }
     }
